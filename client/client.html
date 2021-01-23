@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- <meta  http-equiv="Content-Security-Policy" content="script-src 'self' unsafe-inline"> -->
+        <title>直播软件</title>
+    </head>
+    <body>
+        <!-- <div class="title">
+            <div id="titleName">直播软件</div>
+            <div class="titleOperation">
+                <span id="smallBtn">缩小</span>ss
+                <span id="restoreBtn">还原</span>
+                <span id="closeBtn">&nbsp;X&nbsp;</span>
+            </div>
+        </div> 去掉这个地方，这里不打算用electron生成应用程序，选择网页实现-->
+        <div id="remoteVideo">
+        </div>
+        <div class="videoContent">
+            <div class="localVideo">
+                <video  id="localVideo"  muted>
+                    <!-- 居然要设置muted 否则不能播放？ -->
+                </video>
+            </div>
+            <div class="chooseRole">
+                <div class="roleContent">
+                    <p>记住您的选择</p>
+                    <button id="hostBtn">主播</button>
+                    <button id="guestBtn">游客</button>
+                </div>
+            </div>
+        </div>
+        <div class="messageContent">
+            <div id="messageContent">
+                <p>弹幕或者消息</p>
+            </div>
+            <div class="messageOperation">
+                <input type="text" id="userName"  placeholder="输入您的账号" />
+                <button id="loginBtn">登 录</button>
+                <input type="text" id="message"  placeholder="输入您的消息" />
+                <button id="sendBtn">发 送</button>
+            </div>
+        </div>
+    </body>
+</html>
+<link type="text/css" rel="styleSheet"  href="client.css" />
+<script src="tool.js"></script>
+<script src="client.js"></script>
+<script src="https://cdn.bootcss.com/flv.js/1.4.0/flv.min.js">
+ // 由于是flv无法在网页上播放的原因，需要引入其他的插件来播放，我也不想做其他的设置让流可以播放；
+ </script>
